@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ name }}'s Card{% endblock %}
+
+{% block content %}
+<div class="glass-panel" style="text-align: center;">
+    <div class="profile-img-container">
+        <img src="{{ image_url }}" alt="Profile Image of {{ name }}" class="profile-img" onerror="this.src='https://ui-avatars.com/api/?name={{ name }}&background=random&size=150'">
+    </div>
+    
+    <h2 class="profile-name">{{ name }}</h2>
+    <p class="profile-bio">{{ bio }}</p>
+    
+    <a href="/" class="btn-back">Create Another</a>
+</div>
+{% endblock %}

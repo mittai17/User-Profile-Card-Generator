@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Create Card{% endblock %}
+
+{% block content %}
+<div class="glass-panel">
+    <h1 class="title">Create Profile</h1>
+    <form action="/" method="POST">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="bio">Short Bio</label>
+            <textarea id="bio" name="bio" class="form-control" placeholder="Tell us about yourself..." required></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="image_url">Profile Image URL</label>
+            <input type="url" id="image_url" name="image_url" class="form-control" placeholder="https://example.com/image.jpg" required>
+        </div>
+        
+        <button type="submit" class="btn-submit">Generate Card</button>
+    </form>
+</div>
+{% endblock %}
